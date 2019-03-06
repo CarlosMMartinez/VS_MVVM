@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Wpf_MVVM.Connectors;
 
 namespace Wpf_MVVM
 {
@@ -13,5 +14,10 @@ namespace Wpf_MVVM
     /// </summary>
     public partial class App : Application
     {
-    }
+        private static DbConnector _dbConnector = new DbConnector();
+
+        public static DbConnector DbConnector { get => _dbConnector;  }
+
+        
+    }   
 }

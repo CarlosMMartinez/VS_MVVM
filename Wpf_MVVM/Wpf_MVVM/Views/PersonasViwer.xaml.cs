@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Wpf_MVVM.Views;
 
-namespace Wpf_MVVM
+namespace Wpf_MVVM.Views
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para PersonasViwer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PersonasViwer : Window
     {
-        public MainWindow()
+        public PersonasViwer()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            PersonasViwer p = new PersonasViwer();
-            p.ShowDialog();
         }
     }
 }
