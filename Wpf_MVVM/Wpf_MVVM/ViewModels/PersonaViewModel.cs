@@ -57,6 +57,8 @@ namespace Wpf_MVVM.ViewModels
             ListaPersonas = App.DbConnector.listarPersonas();
 
         }
+        //Añadiendo otra public ICommand _nombreMetodo {get;set;} podremos dotar de nuevas funcionalidades 
+        //Y bindearlas en la view como command buttons.
 
         //ctor tab tab
         public PersonaViewModel()
