@@ -37,7 +37,7 @@ namespace Wpf_MVVM.ViewModels
 
         }
         
-
+        //Reemplazamos el evento click con el Command, evitando crear code behind
         private ICommand _listarPersonasCommand;
 
         public ICommand ListarPersonasCommand
@@ -51,6 +51,7 @@ namespace Wpf_MVVM.ViewModels
             }
 
         }
+        //Metodo mandado por el command hacia la view
         private void ListarPersonas()
         {
             ListaPersonas = App.DbConnector.listarPersonas();
