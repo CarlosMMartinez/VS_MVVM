@@ -3,18 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         <!-- Añadimos el ViewModel -->
         xmlns:vm="clr-namespace:Wpf_MVVM.ViewModels"
         xmlns:local="clr-namespace:Wpf_MVVM.Views"
         mc:Ignorable="d"
         Title="PersonasViwer" Height="450" Width="800">
+         <!-- Añadimos el diccionario de datos del ViewModel -->
     <Window.Resources>
         <vm:PersonaViewModel x:Key="PersonaVM"/>
     </Window.Resources>
+        <!-- Ponemos el contexto del ViewModel -->
     <Grid DataContext="{StaticResource PersonaVM}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+             <!-- BINDING -->
         <ListBox ItemsSource="{Binding ListaPersonas}" SelectedItem="{Binding CurrentPersona}"/>
         <Label Grid.Row="1" Content="{Binding ListaPersonas.Count}" HorizontalAlignment="Left"/>
         <Button Command="{Binding ListarPersonasCommand}" Grid.Row="1" Content="Cargar" HorizontalAlignment="Right"/>
