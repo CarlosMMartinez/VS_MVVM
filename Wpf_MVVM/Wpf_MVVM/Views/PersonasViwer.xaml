@@ -21,6 +21,7 @@
              <!-- BINDING -->
         <ListBox ItemsSource="{Binding ListaPersonas}" SelectedItem="{Binding CurrentPersona}"/>
         <Label Grid.Row="1" Content="{Binding ListaPersonas.Count}" HorizontalAlignment="Left"/>
+            <!-- Modificamos el button para que llame al método del ViewModel -->
         <Button Command="{Binding ListarPersonasCommand}" Grid.Row="1" Content="Cargar" HorizontalAlignment="Right"/>
     </Grid>
 </Window>
